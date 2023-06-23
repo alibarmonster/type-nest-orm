@@ -10,9 +10,9 @@ export class Comment {
   @Column()
   text: string;
 
-  @ManyToOne((type) => User, (user) => user.comments)
+  @ManyToOne(() => User, (user) => user.comments)
   user: User;
 
-  @ManyToOne((type) => Topic, (topic) => topic.comments)
+  @ManyToOne(() => Topic, (topic) => topic.comments)
   topic: Topic;
 }
